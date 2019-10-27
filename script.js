@@ -45,8 +45,8 @@
 // const genitive = (n, word) => {
 //     let res = word.many2; //liczba mnoga słowa
 //     if (n % 100 < 5 || n % 100 > 2) {
-//         if (n == 1) res = word.singular;
-//         if (n % 10 > 1 && n % 10 < 5) res = word.many1;
+//         if (n == 1) res = word.singular; // liczba pojedyńcza
+//         if (n % 10 > 1 && n % 10 < 5) res = word.many1; // liczba mnoga do 4
 //     }
 //     return `${n} ${res}`;
 // }
