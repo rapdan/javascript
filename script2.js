@@ -248,15 +248,27 @@
 //     }
 // }
 // lub =============================================
-const directionByKeyCode = (keyCode) => ({
-    '87': 'góra ↑',
-    '65': 'lewo ←',
-    '68': 'prawo →',
-    '83': 'dół ↓',
-})[keyCode];
+// const directionByKeyCode = (keyCode) => ({
+//     '87': 'góra ↑',
+//     '65': 'lewo ←',
+//     '68': 'prawo →',
+//     '83': 'dół ↓',
+// })[keyCode];
+// // Test:
+// console.log(directionByKeyCode(87));
+// console.log(directionByKeyCode(68));
+// console.log(directionByKeyCode(83));
+// console.log(directionByKeyCode(65));
+// console.log(directionByKeyCode(34));
+
+
+
+
+// Cwiczenie 10
+// Funkcja byDesc(arr) sortujaca od największej wartości do najmniejszej. Przyjmuje tablicę.
+// np. byDesc([5,7,2,10]) zwróci: [10, 7, 5, 2]
+const byDesc = (arr) => arr.sort((a, b) => b - a);
+
 // Test:
-console.log(directionByKeyCode(87));
-console.log(directionByKeyCode(68));
-console.log(directionByKeyCode(83));
-console.log(directionByKeyCode(65));
-console.log(directionByKeyCode(34));
+console.log(byDesc([23, 56, 43, 1, 2, 7]));
+console.log(byDesc([-3, 56, 0, 43, 1, -2, 17, 5.5, 5, 6]));
