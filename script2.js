@@ -267,8 +267,37 @@
 // Cwiczenie 10
 // Funkcja byDesc(arr) sortujaca od największej wartości do najmniejszej. Przyjmuje tablicę.
 // np. byDesc([5,7,2,10]) zwróci: [10, 7, 5, 2]
-const byDesc = (arr) => arr.sort((a, b) => b - a);
+//const byDesc = (arr) => arr.sort((a, b) => b - a);
 
 // Test:
-console.log(byDesc([23, 56, 43, 1, 2, 7]));
-console.log(byDesc([-3, 56, 0, 43, 1, -2, 17, 5.5, 5, 6]));
+// console.log(byDesc([23, 56, 43, 1, 2, 7]));
+// console.log(byDesc([-3, 56, 0, 43, 1, -2, 17, 5.5, 5, 6]));
+
+
+
+
+
+// Cwiczenie 11
+// Sortowanie liczb wg porządku najpierw nieparzyste od najwiekszej do najmniejszej, a później
+// parzyste od największej do najmniejszej. np. oddity([8,10,5,9]) zwroci: [9,5,10,8]
+// podpowiedź: array2.sort(function(a,b){return a-b}); sortowanie od najwiekszej 
+// array2.sort(function(a,b){return b-a}); sortowanie od najmniejszej do największej 
+const oddity = (a) => {
+    a.sort((a, b) => b - a);
+    n = [];
+    for (let i of a) {
+        if (i % 2 == 1) {
+            n.push(i);
+        }
+    }
+    for (let i of a) {
+        if (i % 2 == 0) {
+            n.push(i);
+        }
+    }
+    return n;
+};
+
+// Test:
+console.log(oddity([8, 10, 5, 9, 1, 7, 4, 3, 11, 15, 20, 100]));
+console.log(oddity([8, -10, 5, 9, 1, 0, 4, 3, 11, 15, 25, 10]));
