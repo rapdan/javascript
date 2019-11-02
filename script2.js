@@ -282,22 +282,33 @@
 // parzyste od największej do najmniejszej. np. oddity([8,10,5,9]) zwroci: [9,5,10,8]
 // podpowiedź: array2.sort(function(a,b){return a-b}); sortowanie od najwiekszej 
 // array2.sort(function(a,b){return b-a}); sortowanie od najmniejszej do największej 
-const oddity = (a) => {
-    a.sort((a, b) => b - a);
-    n = [];
-    for (let i of a) {
-        if (i % 2 == 1) {
-            n.push(i);
-        }
-    }
-    for (let i of a) {
-        if (i % 2 == 0) {
-            n.push(i);
-        }
-    }
-    return n;
-};
+// const oddity = (a) => {
+//     a.sort((a, b) => b - a);
+//     n = [];
+//     for (let i of a) {
+//         if (i % 2 == 1) {
+//             n.push(i);
+//         }
+//     }
+//     for (let i of a) {
+//         if (i % 2 == 0) {
+//             n.push(i);
+//         }
+//     }
+//     return n;
+// };
+
+// // Test:
+// console.log(oddity([8, 10, 5, 9, 1, 7, 4, 3, 11, 15, 20, 100]));
+// console.log(oddity([8, -10, 5, 9, 1, 0, 4, 3, 11, 15, 25, 10]));
+
+
+
+// Cwiczenie 12
+// Funkcja byLength(arrStr) przyjmuje tablicę stringów a zwraca uporządkowaną tablicę od długości stringów
+// np. byLength(['kolo','samochod','elekton']) zwróci: ['samochod','elektron','kolo']
+const byLength = s => s.sort((a,b)=>b.length - a.length);
 
 // Test:
-console.log(oddity([8, 10, 5, 9, 1, 7, 4, 3, 11, 15, 20, 100]));
-console.log(oddity([8, -10, 5, 9, 1, 0, 4, 3, 11, 15, 25, 10]));
+console.log(byLength(['kolo','samochod','elekton']));
+console.log(byLength(['kolo','samochod','elekton', 'Ala', 'Zoologiczny']));
